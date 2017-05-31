@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootcamp JS week 2 – task 2</title>
+  <style>
+  form input,
+  form textarea {
+    display: block;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .error {
+    border: 2px solid #f00;
+  }
+
+  ul.error {
+    width: 300px;
+    padding: 15px;
+    background: #f00;
+    color: #fff;
+    list-style-type: none;
+  }
+
+  p.send {
+    width: 300px;
+    padding: 15px;
+    border: 2px solid #0f0;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>Bootcamp JS week 2 – task 2</h1>
+
+  <form action="#" id="form">
+      <input type="text" name="your-name" placeholder="Imię i nazwisko" data-error="Podaj imię i nazwisko">
+      <input type="email" name="your-email" placeholder="Adres e-mail" data-error="Podaj poprawny adres e-mail">
+      <input type="number" name="your-number" placeholder="Numer telefonu" data-error="Podaj poprawny numer">
+      <textarea name="your-message" placeholder="Treść wiadomości" data-error="Wpisz treść wiadomości"></textarea>
+
+      <button type="submit">Wyślij</button>
+  </form>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
