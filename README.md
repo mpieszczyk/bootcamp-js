@@ -1,2 +1,3 @@
 # bootcamp-js
-6 weeks of learning JS
+
+Repo with tasks from 6 weeks JavaScript bootcamp.

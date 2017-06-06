@@ -5,13 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootcamp JS week one – task 1</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
 </head>
 <body>
 
-  <h1>Bootcamp JS week one – task 1</h1>
+<nav id="menu">
+  <div class="title">
+    <img src="assets/img/img-min.png" />
+    <h1>Week one – task 1</h1>
+  </div>
+  <ul class="nav-menu">
+    <li class="active"><a href="#">Task1</a></li>
+    <li><a href="../task2/task2.html">Task2</a></li>
+    <li><a href="../task3/task3.html">Task3</a></li>
+    <li><a href="../task4/task4.html">Task4</a></li>
+    <li><a href="../task5/task5.html">Task5</a></li>
+  </ul>
+</nav>
 
-  <code>getPrice(basket,price);</code>
+<section id="site">
+  <div class="container">
+    <p class="title-console">
+      1. Instrukcje warunkowe
+    </p>
+    <p class="console">
+      Za pomocą instrukcji warunkowej <code>if</code> (wraz z blokami <code>else</code> ) lub <code>switch</code> , stwórz skrypt, który
+      w konsoli (za pomocą <code>console.log()</code>) wyświetli cenę produktu, w zależności od liczby
+      zakupionych przez klienta do tej pory produktów. Oczywiście wszystko to jest abstrakcyjne,
+      więc musisz utworzyć zmienną, która będzie przechowywała liczbę zakupionych produktów,
+      np. 100, a następnie zmienną z ceną jakiegoś fikcyjnego produktu, np. 50. Poniżej tych
+      dwóch zmiennych utwórz blok instrukcji warunkowych, który ustali ostateczną cenę, w
+      zależności od liczby zakupionych przez klienta produktów.<br>
+      Jeśli zatem klient ma już na koncie od 5 do 20 zakupionych produktów, to przyznaj zniżkę
+      5%. Jeśli 21 do 50, to 10%, od 51 do 100 produktów daje zniżkę 15%, a powyżej 100
+      produktów zniżkę w wysokości 20%.<br>
+      Musisz zatem obliczyć ostateczną cenę produktu, a następnie wyświetlić w konsoli
+      komunikat, np. “Podstawowa cena produktu to 20zł, po obniżce to 17zł”. Aby to
+      przetestować, będziesz musiał zmieniać liczbę zakupionych przez klienta produktów w
+      zmiennej, w której taką informację zapiszesz.
 
-<script type="text/javascript" src="script.js"></script>
+    </p>
+  </div>
+</section>
+
+<footer id="three">
+  <div class="footer">
+
+  </div>
+</footer>
+
+<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
