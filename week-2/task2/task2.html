@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 2</title>
+  <title>Bootcamp JS week two – task 2</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
   <style>
   form input,
   form textarea {
@@ -14,6 +17,8 @@
     width: 300px;
     height: 30px;
     font-size: 14px;
+    background: #aaa;
+    padding: 0 10px;
   }
   .error {
     border: 2px solid #f00;
@@ -32,21 +37,71 @@
     padding: 15px;
     border: 2px solid #0f0;
   }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: #f7df1e;
+    font-weight: bold;
+    border: 2px solid #232323;
+    color: #232323;
+  }
   </style>
 </head>
 <body>
 
-  <h1>Bootcamp JS week 2 – task 2</h1>
+  <nav id="menu">
+    <div class="title">
+      <img src="assets/img/img-min.png" />
+      <h1>Week two – task 2</h1>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../task1/task1.html">Task1</a></li>
+      <li class="active"><a href="#">Task2</a></li>
+      <li><a href="../task3/task3.html">Task3</a></li>
+      <li><a href="../task4/task4.html">Task4</a></li>
+      <li><a href="../task5/task5.html">Task5</a></li>
+    </ul>
+  </nav>
 
-  <form action="#" id="form">
-      <input type="text" name="your-name" placeholder="Imię i nazwisko" data-error="Podaj imię i nazwisko">
-      <input type="email" name="your-email" placeholder="Adres e-mail" data-error="Podaj poprawny adres e-mail">
-      <input type="number" name="your-number" placeholder="Numer telefonu" data-error="Podaj poprawny numer">
-      <textarea name="your-message" placeholder="Treść wiadomości" data-error="Wpisz treść wiadomości"></textarea>
+  <section id="site">
+    <div class="container">
+      <p class="title-console">
+        2. Walidator formularza
+      </p>
+      <p class="console">
+        Stwórz prosty walidator formularza, który zawierał będzie pola <code>input</code> o typach <code>“text”</code>,
+        <code>“email”</code>, <code>“number”</code> oraz element <code>textarea</code>. Dodaj do elementu <code>form</code> atrybut
+        <code>novalidate</code>, aby wyłączyć domyślną walidację przeglądarki. Od Ciebie zależy, czy chcesz
+        wyświetlać komunikaty o błędach czy tylko podświetlać niepoprawnie uzupełnione pola np.
+        na czerwono. Za poprawnie uzupełnione pole <code>input</code> o typie <code>“text”</code> lub pole <code>textarea</code>
+        uznajemy takie, które ma wpisany przynajmniej jeden znak. W przypadku pola o typie
+        <code>“email”</code> sprawdź czy zawiera ono znak @, a w przypadku pola o typie <code>“number”</code> czy podana
+        wartość jest liczbą (pamiętaj, że <code>DOM</code> zwróci Ci zawsze wartość o typie <code>String</code>, więc
+        musisz znaleźć sposób, jak sprawdzić czy string ten zawiera wyłącznie liczbę).
+        Uwaga: Jeśli stworzysz pole <code>input</code> o typie <code>“number”</code> to w niektórych przeglądarkach nie
+        będzie możliwości wpisania innych znaków niż liczby. Mimo to napisz logikę, która taką
+        walidację wykona, a aby móc wprowadzić inne znaki niż tylko liczby, zmień na czas testów
+        atrybut type pola <code>input</code> z <code>“number”</code> na <code>“text”</code>.
+      </p>
 
-      <button type="submit">Wyślij</button>
-  </form>
+      <form action="#" id="form">
+          <input type="text" name="your-name" placeholder="Imię i nazwisko" data-error="Podaj imię i nazwisko">
+          <input type="email" name="your-email" placeholder="Adres e-mail" data-error="Podaj poprawny adres e-mail">
+          <input type="number" name="your-number" placeholder="Numer telefonu" data-error="Podaj poprawny numer">
+          <textarea name="your-message" placeholder="Treść wiadomości" data-error="Wpisz treść wiadomości"></textarea>
 
-<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+          <button class="btn" type="submit">Wyślij</button>
+      </form>
+
+    </div>
+  </section>
+
+  <footer id="three">
+    <div class="footer">
+
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+  </html>

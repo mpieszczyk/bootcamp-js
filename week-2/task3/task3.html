@@ -4,31 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 3</title>
+  <title>Bootcamp JS week two – task 3</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
   <style>
     .watch {
       width: 100px;
       height: 100px;
       background: #000;
-      color: #fff;
+      color: #f7df1e;
       font-size: 48px;
       font-weight: bold;
       text-align: center;
       line-height: 100px;
       border-radius: 100%;
-      border: 3px solid #f00;
+      border: 3px solid #f7df1e;
       font-family: Arial;
     }
     .success {
       width: 300px;
       height: 100px;
-      background: #366c24;
-      color: #fff;
+      background: #f7df1e;
+      color: #232323;
       font-size: 36px;
       font-weight: bold;
       text-align: center;
       line-height: 100px;
       font-family: Arial;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #f7df1e;
+      font-weight: bold;
+      border: 2px solid #232323;
+      color: #232323;
     }
     .hidden{
       display: none;
@@ -37,12 +47,54 @@
 </head>
 <body>
 
-  <h1>Bootcamp JS week 2 – task 3</h1>
+  <nav id="menu">
+    <div class="title">
+      <img src="assets/img/img-min.png" />
+      <h1>Week two – task 3</h1>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../task1/task1.html">Task1</a></li>
+      <li><a href="../task2/task2.html">Task2</a></li>
+      <li class="active"><a href="#">Task3</a></li>
+      <li><a href="../task4/task4.html">Task4</a></li>
+      <li><a href="../task5/task5.html">Task5</a></li>
+    </ul>
+  </nav>
 
-  <button id="btn">ROZPOCZNIJ ODLICZANIE</button>
+  <section id="site">
+    <div class="container">
+      <p class="title-console">
+        3. Odliczanie od 10 do 0
+      </p>
+      <p class="console">
+        Stwórz projekt, który po uruchomieniu odpowiedniej funkcji, pozwoli na odliczanie
+        <b>od 10 do 0</b>. Wszystkie wartości powinny być wyświetlane na stronie, a czas pomiędzy
+        zmianą wartości powinien wynosić <b>1 sekundę</b>. Choć cały Twój kod może być podzielony na
+        wiele funkcji, jedna z nich powinna uruchamiać proces odliczania. Przy wywołaniu tej
+        funkcji, daj możliwość przekazania innej funkcji jako argument. Przekazaną funkcję
+        wywołaj, gdy licznik osiągnie wartość <b>0</b>.<br /><br />
+        Istotą przekazywania jednej funkcji do drugiej (w tym przypadku nazwalibyśmy ją funkcją
+        <code>callback</code>) jest to, aby dać użytkownikowi naszego kodu pewną gotową funkcjonalność
+        (odliczanie od 10 do 0), ale także możliwość dodania czegoś od siebie, tj. wykonania
+        własnej funkcji po zakończeniu odliczania. W przekazanej funkcji możesz wpisać po prostu
+        <code>console.log(“Odliczanie zakończone!”)</code>.<br /><br />
+        <b>Podpowiedź:</b> użyj funkcji <code>setTimeout</code> wywołując ją wielokrotnie zamiast <code>setInterval</code>,
+        którą wykonałbyś wyłącznie raz.
+      </p>
 
-  <div id="dspl" class="watch hidden"></div>
+      <button class="btn" id="button">ROZPOCZNIJ ODLICZANIE</button>
 
-<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+      <div id="dspl" class="watch hidden"></div>
+
+    </div>
+  </section>
+
+  <footer id="three">
+    <div class="footer">
+
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+  </html>

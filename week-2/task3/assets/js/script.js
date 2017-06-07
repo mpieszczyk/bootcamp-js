@@ -1,7 +1,7 @@
 (function() {
 
 var dspl = document.querySelector("#dspl");
-var btn = document.querySelector("#btn");
+var btn = document.querySelector("#button");
 var time = 10;
 
     function clock(success) {

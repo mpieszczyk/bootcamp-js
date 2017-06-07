@@ -4,47 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 5</title>
+  <title>Bootcamp JS week two – task 5</title>
 
-  <style>
-    div, h1 {
-      margin:auto auto;
-      width:400px;
-      text-align: justify;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
 </head>
 <body>
 
-  <h1>Bootcamp JS week 2 – task 5</h1>
-  <div>
+<nav id="menu">
+  <div class="title">
+    <img src="assets/img/img-min.png" />
+    <h1>Week two – task 5</h1>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="../task1/task1.html">Task1</a></li>
+    <li><a href="../task2/task2.html">Task2</a></li>
+    <li><a href="../task3/task3.html">Task3</a></li>
+    <li><a href="../task4/task4.html">Task4</a></li>
+    <li class="active" ><a href="#">Task5</a></li>
+  </ul>
+</nav>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus lectus quam, eget maximus quam posuere sit amet. Sed facilisis urna id maximus feugiat. Cras aliquam porttitor elementum. Nunc vulputate hendrerit aliquet. Pellentesque maximus tincidunt ex, vitae eleifend metus imperdiet quis. Duis pulvinar, eros sit amet vehicula tempus, metus libero maximus leo, id pharetra quam velit ac enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse suscipit ipsum sem, at tempor augue lacinia ultrices.
+<section id="site">
+  <div class="container">
+    <p class="title-console">
+      5. Funkcja debounce
     </p>
+    <p class="console">
+      Stwórz funkcję o nazwie <code>debounce</code>, która przyjmie przy wywołaniu dwa argumenty.
+      Pierwszy z nich to inna <b>funkcja</b> do późniejszego wywołania, a drugi to <b>czas</b> w
+      milisekundach. Po takim wywołaniu, funkcja ta powinna zwrócić <b>nową funkcję</b>, którą
+      można zapisać np. w zmiennej. Następnie tę nową funkcję będzie można wielokrotnie
+      wywoływać (a ona powinna wywołać pierwotnie przekazaną funkcję), jednak jeśli czas
+      pomiędzy poszczególnymi wywołaniami będzie krótszy, niż podany wcześniej (wspomnian yargument z czasem w milisekundach), to funkcja nie powinna nic zrobić, ale ustawić licznik
+      na kolejne <b>Xms</b> i dopiero wtedy się wywołać.<br /><br />
+      Rozwiązania typu <b>debounce</b> stosuje się np. przy obsłudze zdarzenia <code>scroll</code> w
+      przeglądarkach, które wywoływane jest bardzo wiele razy. Jeśli nie chcemy, aby nasza
+      funkcja negatywnie wpływała na wydajność podczas scrollowania, a wystarczy, że wywoła
+      się np. 100ms po zakończeniu scrollowania, wtedy stosujemy funkcję debounce. Innym
+      przykładem jest np. zdarzenie <code>resize</code>, które też jest wielokrotnie wywoływane podczas
+      skalowania okna przeglądarki, a nam może zależeć, aby wywołać pewien kod dopiero
+      wtedy, gdy taka akcja się zakończy.<br /><br />
+      Całość przetestować możesz z użyciem tego kodu: <code>https://pastebin.com/J0BJVqtR</code>. Twoim
+      zadaniem jest dopisanie funkcji <code>debounce</code>, aby ten kod zaczął działać.<br /><br />
+      <b>Podpowiedź:</b> będziesz potrzebował funkcji <code>setTimeout</code> i <code>clearTimeout</code>.
+    </p>
+  </div>
+</section>
 
-    <p>
-      Vivamus pretium mauris sed facilisis porta. Donec feugiat ac tellus sed vestibulum. Nam mattis nunc vel purus lobortis imperdiet. Nullam vitae rutrum nisi, nec malesuada massa. Curabitur rutrum id nibh a tristique. Morbi luctus laoreet ante vel pellentesque. Morbi vehicula metus id varius pharetra. Integer a vulputate orci. Phasellus sodales dui lacus, id condimentum ligula euismod id. Nunc justo lectus, faucibus vel gravida vitae, vulputate sed lorem.
-    </p>
-
-    <p>
-      Donec sed faucibus neque. Donec sit amet metus leo. Phasellus maximus placerat magna, ut interdum erat eleifend ut. Suspendisse pulvinar vehicula risus. Cras sit amet mi at sapien rhoncus tempus a sed ligula. Ut imperdiet libero turpis, at feugiat tortor blandit eget. Vestibulum eleifend ligula in nisl sollicitudin posuere. In pharetra, risus vel scelerisque vulputate, nibh leo blandit magna, sed placerat urna lectus a libero. Sed pharetra vehicula rutrum. Pellentesque gravida placerat vehicula. Ut iaculis, ex nec tempor blandit, nulla erat faucibus quam, vel tempus neque nisl sed eros. Nunc dapibus quam in metus auctor rhoncus.
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus lectus quam, eget maximus quam posuere sit amet. Sed facilisis urna id maximus feugiat. Cras aliquam porttitor elementum. Nunc vulputate hendrerit aliquet. Pellentesque maximus tincidunt ex, vitae eleifend metus imperdiet quis. Duis pulvinar, eros sit amet vehicula tempus, metus libero maximus leo, id pharetra quam velit ac enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse suscipit ipsum sem, at tempor augue lacinia ultrices.
-    </p>
-
-    <p>
-      Vivamus pretium mauris sed facilisis porta. Donec feugiat ac tellus sed vestibulum. Nam mattis nunc vel purus lobortis imperdiet. Nullam vitae rutrum nisi, nec malesuada massa. Curabitur rutrum id nibh a tristique. Morbi luctus laoreet ante vel pellentesque. Morbi vehicula metus id varius pharetra. Integer a vulputate orci. Phasellus sodales dui lacus, id condimentum ligula euismod id. Nunc justo lectus, faucibus vel gravida vitae, vulputate sed lorem.
-    </p>
-
-    <p>
-      Donec sed faucibus neque. Donec sit amet metus leo. Phasellus maximus placerat magna, ut interdum erat eleifend ut. Suspendisse pulvinar vehicula risus. Cras sit amet mi at sapien rhoncus tempus a sed ligula. Ut imperdiet libero turpis, at feugiat tortor blandit eget. Vestibulum eleifend ligula in nisl sollicitudin posuere. In pharetra, risus vel scelerisque vulputate, nibh leo blandit magna, sed placerat urna lectus a libero. Sed pharetra vehicula rutrum. Pellentesque gravida placerat vehicula. Ut iaculis, ex nec tempor blandit, nulla erat faucibus quam, vel tempus neque nisl sed eros. Nunc dapibus quam in metus auctor rhoncus.
-    </p>
+<footer id="three">
+  <div class="footer">
 
   </div>
+</footer>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
