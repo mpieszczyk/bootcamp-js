@@ -5,12 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootcamp JS week 3 – task 1</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+  <style>
+
+    .box {
+      margin-top: 10px;
+      padding: 20px;
+      border: 2px solid #777;
+      background: #232323;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #f7df1e;
+      font-weight: bold;
+      border: 2px solid #232323;
+      color: #232323;
+    }
+    </style>
 </head>
 <body>
 
-  <h1>Bootcamp JS week 3 – task 1</h1>
+  <nav id="menu">
+    <div class="title">
+      <img src="assets/img/img-min.png" />
+      <h1>Week 3 – task 1</h1>
+    </div>
+    <ul class="nav-menu">
+      <li class="active"><a href="#">Task1</a></li>
+      <li><a href="../task2/task2.html">Task2</a></li>
+      <li><a href="../task3/task3.html">Task3</a></li>
+      <li><a href="../task4/task4.html">Task4</a></li>
+      <li><a href="../task5/task5.html">Task5</a></li>
+    </ul>
+  </nav>
 
+  <section id="site">
+    <div class="container">
+      <p class="title-console">
+        1. Polyfill metody repeat dla String
+      </p>
+      <p class="console">
+        W standardzie <code>EcmaScript 2015</code> (o którym więcej w 5 i 6 tygodniu Bootcampu) pojawiła się
+        nowa metoda dostępna na obiektach typu <code>String</code> o nazwie repeat . Jej użycie wygląda
+        następująco:<br /><br />
+        <code>“hej ”.repeat(3) // zwraca “hej hej hej”</code>
+        <br /><br />
+        Metoda ta jest dostępna we wszystkich nowoczesnych przeglądarkach internetowych, ale
+        aby poćwiczyć rozszerzanie wbudowanych typów, utwórz jej <code>polyfill</code>. W kodzie sprawdź
+        najpierw czy taka metoda już w przeglądarce została zaimplementowana, a jeśli nie, to
+        dopisz własną funkcję, która będzie mogła być na dowolnym stringu wywołana w podany
+        wyżej sposób.
+        Podpowiedź: rozszerzaj prototyp konstruktora <code>String</code>. Przy sprawdzeniu czy taka metoda
+        już istnieje, w nowoczesnych przeglądarkach otrzymasz odpowiedź pozytywną. Jeśli zatem
+        napiszesz odpowiedni warunek, to nie będzie można przetestować Twojej metody. Z tego
+        powodu, zamiast <code>repeat</code> możesz ją nazwać <code>repeatt</code>.
+      </p>
+    </div>
+  </section>
 
-<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+  <footer id="three">
+    <div class="footer">
+
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+  </html>

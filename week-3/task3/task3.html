@@ -4,45 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 3</title>
+  <title>Bootcamp JS week 3 – task 3</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
   <style>
-    .watch {
-      width: 100px;
-      height: 100px;
-      background: #000;
-      color: #fff;
-      font-size: 48px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 100px;
-      border-radius: 100%;
-      border: 3px solid #f00;
-      font-family: Arial;
-    }
-    .success {
-      width: 300px;
-      height: 100px;
-      background: #366c24;
-      color: #fff;
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 100px;
-      font-family: Arial;
-    }
-    .hidden{
-      display: none;
-    }
+
   </style>
 </head>
 <body>
 
-  <h1>Bootcamp JS week 2 – task 3</h1>
+  <nav id="menu">
+    <div class="title">
+      <img src="assets/img/img-min.png" />
+      <h1>Week 3 – task 3</h1>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../task1/task1.html">Task1</a></li>
+      <li><a href="../task2/task2.html">Task2</a></li>
+      <li class="active"><a href="#">Task3</a></li>
+      <li><a href="../task4/task4.html">Task4</a></li>
+      <li><a href="../task5/task5.html">Task5</a></li>
+    </ul>
+  </nav>
 
-  <button id="btn">ROZPOCZNIJ ODLICZANIE</button>
+  <section id="site">
+    <div class="container">
+      <p class="title-console">
+        3. Ajaxowy polyfill dla funkcji fetch
+      </p>
+      <p class="console">
+        Napisz <code>polyfill</code> dla funkcji <code>fetch</code> (nie będziemy się tutaj trzymać dokładnie tego, w jaki
+        sposób ona działa, stworzysz jedynie prostą jej wersję). Wykorzystaj obiekt
+        <code>XMLHttpRequest</code> w ten sposób, aby docelowo korzystanie z funkcji fetch wyglądało
+        następująco:<br /><br />
+        <code>
+          fetch("url", function(data) {<br />
+          &nbsp;&nbsp;console.log("Sukces");<br />
+          &nbsp;&nbsp;console.log(data);<br />
+          }, function(err) {<br />
+          &nbsp;&nbsp;console.log("Wystąpił błąd!");<br />
+          &nbsp;&nbsp;console.log(err);<br />
+          });<br /><br />
+        </code>
+        a zatem jako pierwszy argument przekazujemy adres <b>URL</b> (wyślij pod niego zapytanie
+        <b>GET</b>), jako drugi funkcję, którą należy wykonać <b>jeśli wszystko się powiedzie</b> (przekaż jej
+        pobrane dane), a jako trzeci funkcję, która wykona się <b>na wypadek błędu</b> (przekaż jej
+        obiekt z błędem lub komunikat tekstowy). W nowoczesnych przeglądarkach istnieje już
+        funkcja <code>fetch</code>, a zatem aby jej nie nadpisywać, możesz nadać jej inną nazwę, np. <code>fecz</code>.
+        Jako adres URL, z którego pobierane bedą dane, możesz wykorzystać <code>http://
+        code.eduweb.pl/bootcamp/users/</code>
+      </p>
 
-  <div id="dspl" class="watch hidden"></div>
+    </div>
+  </section>
 
-<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+  <footer id="three">
+    <div class="footer">
+
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+  </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 1</title>
+  <title>Bootcamp JS week 4 – task 1</title>
 
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
@@ -35,7 +35,7 @@
   <nav id="menu">
     <div class="title">
       <img src="assets/img/img-min.png" />
-      <h1>Week 2 – task 1</h1>
+      <h1>Week 4 – task 1</h1>
     </div>
     <ul class="nav-menu">
       <li class="active"><a href="#">Task1</a></li>
@@ -49,20 +49,23 @@
   <section id="site">
     <div class="container">
       <p class="title-console">
-        1. Pokazywanie ukrytego elementu
+        1. Selektory w jQuery
       </p>
-      <p class="console">
-        Stwórz projekt z ukrytym elementem HTML (np. <code>div</code> z <code>display:none</code> w CSS), a także
-        przyciskiem (<code>button</code>). Przypisz na kliknięcie przycisku funkcję, która pokaże ukryty
-        element, gdy jest niewidoczny i ukryje go, gdy jest widoczny. Podczas zmiany stanu
-        widoczności tego elementu, zmień również tekst przycisku np. z “Pokaż treść” na “Ukryj
-        treść” i na odwrót.
-      </p>
-      <input type="button" class="btn" value="SHOW BOX">
-      <div class="box hidden">
-        <p>
-          Great! Box is vissible.
-        </p>
+      <div class="console">
+        Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:
+        <ul>
+        <li>wszystkie elementy <code>div</code>, posiadające zarówno klasę <code>grid</code> oraz klasę <code>grid-</code></li>
+        <li>wszystkie elementy <code>a</code>, których atrybut href zaczyna się na “http”, znajdujące się w
+        elemencie o klasie <code>nav</code></li>
+        <li>wszystkie elementy <code>input</code>, których typ to radio lub checkbox oraz dodatkowo nie są
+        aktualnie zaznaczone (<code>checked</code>)</li>
+        <li>wyłącznie pierwszy element <code>p</code>, który jest pusty (nie zawiera dzieci) oraz znajduje się w
+        elemencie <code>div</code> z identyfikatorem <code>text</code></li>
+        <li>wszystkie elementy z klasą <code>pagination-item</code>, które nie są elementem <code>span</code></li>
+        </ul>
+        <b>Uwaga:</b> Możesz utworzyć prostą stronę w HTML, gdzie w jakiś sposób podświetlisz
+        znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać
+        te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.
       </div>
     </div>
   </section>

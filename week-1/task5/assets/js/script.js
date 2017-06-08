@@ -1,9 +1,3 @@
-// 5. Funkcja zwracająca sformatowaną datę
-// Utwórz funkcję o nazwie getDate , która po wywołaniu zwróci aktualną, sformatowaną datę.
-// Data powinna być w formacie dd.mm.rrrr, czyli np. 17.04.2017.
-// Przykładowe użycie tej funkcji powinno wyglądać następująco:
-// getDate(); // zwraca np. “17.04.2017”
-
 function getDate() {
 
   var d1 = new Date();

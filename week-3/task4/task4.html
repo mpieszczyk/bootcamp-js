@@ -4,15 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 4</title>
+  <title>Bootcamp JS week 3 – task 4</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
 </head>
 <body>
 
-  <h1>Bootcamp JS week 2 – task 4</h1>
+<nav id="menu">
+  <div class="title">
+    <img src="assets/img/img-min.png" />
+    <h1>Week 3 – task 4</h1>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="../task1/task1.html">Task1</a></li>
+    <li><a href="../task2/task2.html">Task2</a></li>
+    <li><a href="../task3/task3.html">Task3</a></li>
+    <li class="active"><a href="#">Task4</a></li>
+    <li><a href="../task5/task5.html">Task5</a></li>
+  </ul>
+</nav>
 
+<section id="site">
+  <div class="container">
+    <p class="title-console">
+      4. Funkcja getJSON
+    </p>
+    <p class="console">
+      Mając już rozwiązanie zadania trzeciego, przepisz swój kod tak, aby stworzyć nową funkcję
+      o nazwie <code>getJSON</code>. Idea działania i użycie będą bardzo podobne:<br /><br />
+      <code>
+        getJSON("url", function(data) {<br />
+        &nbsp;&nbsp;console.log("Sukces");<br />
+        &nbsp;&nbsp;console.log(data);<br />
+        &nbsp;&nbsp;// typeof data powinno zwrócić “object”<br />
+        }, function(err) {<br />
+        &nbsp;&nbsp;console.log("Wystąpił błąd!");<br />
+        &nbsp;&nbsp;console.log(err);<br />
+        });<br /><br />
+      </code>
+      Różnica jest taka, że tym razem pod parametrem <code>data</code> przekazanym w funkcji <code>callback</code>,
+      powinien się znajdować javascriptowy obiekt, a nie string przysłany z serwera. Serwer,
+      który przygotowaliśmy pod tym adresem: <code>http://code.eduweb.pl/bootcamp/users/</code> działa tak,
+      że po otrzymaniu standardowego zapytania <b>GET</b>, np. kiedy wpiszesz ten adres w
+      przeglądarce lub wyślesz zapytanie Ajaxem, zwróci dane zawarte w kodzie HTML. Jeśli
+      jednak przy wysyłaniu zapytania dodasz nagłówek <code>Accept: application/json</code>, to serwer
+      zwróci te same dane, ale w formacie <b>JSON</b> (bez kodu HTML). Z poziomu Twojego kodu
+      JavaScript, otrzymane Ajaxem dane to cały czas typ <code>String</code>, ale za pomocą metody
+      <code>JSON.parse</code> możesz ten string łatwo zamienić na javascriptowy obiekt. To jest właśnie
+      Twoje zadanie. Wysyłając żądanie do serwera, dodaj wspomniany wcześniej nagłówek za
+      pomocą metody <code>setRequestHeader</code>, a otrzymane dane sparsuj za pomocą <code>JSON.parse</code> i
+      dopiero wtedy przekaż jako parametr <code>data</code> do funkcji <code>callback.</code>
+    </p>
+  </div>
+</section>
 
+<footer id="three">
+  <div class="footer">
 
-<script type="text/javascript" src="script.js"></script>
+  </div>
+</footer>
+
+<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>

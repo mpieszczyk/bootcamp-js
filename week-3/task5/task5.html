@@ -4,47 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 5</title>
+  <title>Bootcamp JS week 3 – task 5</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
   <style>
-    div, h1 {
-      margin:auto auto;
-      width:400px;
-      text-align: justify;
+    p#result {
+      background: #333;
+      padding: 10px;
+      border: 2px solid #777;
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
     }
   </style>
+
 </head>
 <body>
 
-  <h1>Bootcamp JS week 2 – task 5</h1>
-  <div>
+<nav id="menu">
+  <div class="title">
+    <img src="assets/img/img-min.png" />
+    <h1>Week 3 – task 5</h1>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="../task1/task1.html">Task1</a></li>
+    <li><a href="../task2/task2.html">Task2</a></li>
+    <li><a href="../task3/task3.html">Task3</a></li>
+    <li><a href="../task4/task4.html">Task4</a></li>
+    <li class="active" ><a href="#">Task5</a></li>
+  </ul>
+</nav>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus lectus quam, eget maximus quam posuere sit amet. Sed facilisis urna id maximus feugiat. Cras aliquam porttitor elementum. Nunc vulputate hendrerit aliquet. Pellentesque maximus tincidunt ex, vitae eleifend metus imperdiet quis. Duis pulvinar, eros sit amet vehicula tempus, metus libero maximus leo, id pharetra quam velit ac enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse suscipit ipsum sem, at tempor augue lacinia ultrices.
+<section id="site">
+  <div class="container">
+    <p class="title-console">
+      5. Parser adresu URL
     </p>
+    <p class="console">
+      Stwórz funkcję o nazwie <code>getPage</code>, która pozwoli odczytać numer strony z adresu URL.
+      Dane na temat adresu URL strony, na której wykonuje się Twój kod JavaScript, możesz
+      odczytać za pomocą obiektu <code>window.location</code>. Dopisz do adresu Twojej strony <b>?page=2</b> i
+      wykorzystując odpowiednią właściwość obiektu <code>location</code>, a także odpowiednie wyrażenie
+      regularne, zwróć z funkcji 2 (typ <code>Number</code>) lub <code>null</code>, jeśli query string <b>?page=X</b> nie będzie
+      podany lub będzie niepoprawny, np. <b>?page=tekst</b>
+      Użycie funkcji powinno wyglądać następująco:<br /><br />
+      <code>// dla adresu np. http://localhost/test/?page=2<br />
+      getPage(); // zwraca 2<br /><br />
+      // dla adresu np. http://localhost/test/<br />
+      getPage(); // zwraca null<br /><br />
+      // dla adresu np. http://localhost/test/?page=nieliczba<br />
+      getPage(); // zwraca null</code>
+    </p>
+    <p id="result">
+    </p>
+  </div>
+</section>
 
-    <p>
-      Vivamus pretium mauris sed facilisis porta. Donec feugiat ac tellus sed vestibulum. Nam mattis nunc vel purus lobortis imperdiet. Nullam vitae rutrum nisi, nec malesuada massa. Curabitur rutrum id nibh a tristique. Morbi luctus laoreet ante vel pellentesque. Morbi vehicula metus id varius pharetra. Integer a vulputate orci. Phasellus sodales dui lacus, id condimentum ligula euismod id. Nunc justo lectus, faucibus vel gravida vitae, vulputate sed lorem.
-    </p>
-
-    <p>
-      Donec sed faucibus neque. Donec sit amet metus leo. Phasellus maximus placerat magna, ut interdum erat eleifend ut. Suspendisse pulvinar vehicula risus. Cras sit amet mi at sapien rhoncus tempus a sed ligula. Ut imperdiet libero turpis, at feugiat tortor blandit eget. Vestibulum eleifend ligula in nisl sollicitudin posuere. In pharetra, risus vel scelerisque vulputate, nibh leo blandit magna, sed placerat urna lectus a libero. Sed pharetra vehicula rutrum. Pellentesque gravida placerat vehicula. Ut iaculis, ex nec tempor blandit, nulla erat faucibus quam, vel tempus neque nisl sed eros. Nunc dapibus quam in metus auctor rhoncus.
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus lectus quam, eget maximus quam posuere sit amet. Sed facilisis urna id maximus feugiat. Cras aliquam porttitor elementum. Nunc vulputate hendrerit aliquet. Pellentesque maximus tincidunt ex, vitae eleifend metus imperdiet quis. Duis pulvinar, eros sit amet vehicula tempus, metus libero maximus leo, id pharetra quam velit ac enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse suscipit ipsum sem, at tempor augue lacinia ultrices.
-    </p>
-
-    <p>
-      Vivamus pretium mauris sed facilisis porta. Donec feugiat ac tellus sed vestibulum. Nam mattis nunc vel purus lobortis imperdiet. Nullam vitae rutrum nisi, nec malesuada massa. Curabitur rutrum id nibh a tristique. Morbi luctus laoreet ante vel pellentesque. Morbi vehicula metus id varius pharetra. Integer a vulputate orci. Phasellus sodales dui lacus, id condimentum ligula euismod id. Nunc justo lectus, faucibus vel gravida vitae, vulputate sed lorem.
-    </p>
-
-    <p>
-      Donec sed faucibus neque. Donec sit amet metus leo. Phasellus maximus placerat magna, ut interdum erat eleifend ut. Suspendisse pulvinar vehicula risus. Cras sit amet mi at sapien rhoncus tempus a sed ligula. Ut imperdiet libero turpis, at feugiat tortor blandit eget. Vestibulum eleifend ligula in nisl sollicitudin posuere. In pharetra, risus vel scelerisque vulputate, nibh leo blandit magna, sed placerat urna lectus a libero. Sed pharetra vehicula rutrum. Pellentesque gravida placerat vehicula. Ut iaculis, ex nec tempor blandit, nulla erat faucibus quam, vel tempus neque nisl sed eros. Nunc dapibus quam in metus auctor rhoncus.
-    </p>
+<footer id="three">
+  <div class="footer">
 
   </div>
+</footer>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>

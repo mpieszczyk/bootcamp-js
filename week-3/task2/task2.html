@@ -4,49 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bootcamp JS week 2 – task 2</title>
+  <title>Bootcamp JS week 3 – task 2</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
   <style>
-  form input,
-  form textarea {
-    display: block;
-    margin-bottom: 15px;
-    border: 2px solid #ddd;
-    width: 300px;
-    height: 30px;
-    font-size: 14px;
-  }
-  .error {
-    border: 2px solid #f00;
-  }
-
-  ul.error {
-    width: 300px;
-    padding: 15px;
-    background: #f00;
-    color: #fff;
-    list-style-type: none;
-  }
-
-  p.send {
-    width: 300px;
-    padding: 15px;
-    border: 2px solid #0f0;
+  #button {
+    padding: 10px;
+    background-color: #f7df1e;
+    font-weight: bold;
+    border: 2px solid #232323;
+    color: #232323;
   }
   </style>
 </head>
 <body>
 
-  <h1>Bootcamp JS week 2 – task 2</h1>
+  <nav id="menu">
+    <div class="title">
+      <img src="assets/img/img-min.png" />
+      <h1>Week 3 – task 2</h1>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../task1/task1.html">Task1</a></li>
+      <li class="active"><a href="#">Task2</a></li>
+      <li><a href="../task3/task3.html">Task3</a></li>
+      <li><a href="../task4/task4.html">Task4</a></li>
+      <li><a href="../task5/task5.html">Task5</a></li>
+    </ul>
+  </nav>
 
-  <form action="#" id="form">
-      <input type="text" name="your-name" placeholder="Imię i nazwisko" data-error="Podaj imię i nazwisko">
-      <input type="email" name="your-email" placeholder="Adres e-mail" data-error="Podaj poprawny adres e-mail">
-      <input type="number" name="your-number" placeholder="Numer telefonu" data-error="Podaj poprawny numer">
-      <textarea name="your-message" placeholder="Treść wiadomości" data-error="Wpisz treść wiadomości"></textarea>
+  <section id="site">
+    <div class="container">
+      <p class="title-console">
+        2. Wrapper Toggler dla elementów z drzewa DOM
+        <input type="button" id="button" value="Click to toggle!" />
 
-      <button type="submit">Wyślij</button>
-  </form>
+      </p>
+      <p id="section" class="console">
+        Do przygotowanego pod adresem <code>http://pastebin.com/hUK5tnh3</code> kodu dodaj konstruktor
+        (klasę) o nazwie <code>Toggler</code>. Przy tworzeniu nowych jej instancji z użyciem słowa kluczowego
+        new (jak możesz zobaczyć w przygotowanym kodzie) przekazywać będziemy selektor. Za
+        jego pomocą należy znaleźć na stronie odpowiedni element (skorzystaj z metody
+        <code>document.querySelector</code>) i zapisać go w nowo stworzonym obiekcie. Następnie dodaj 3
+        metody. Pierwsza z nich o nazwie <code>getElem</code> powinna po prostu zwrócić znaleziony
+        wcześniej element. Metoda <code>show</code> i <code>hide</code> powinny kolejno pokazywać i ukrywać element.
+        Jeśli wszystko wykonasz poprawnie, kod który został już napisany powinien działać bez
+        żadnych modyfikacji. Zauważ, że do elementu o identyfikatorze <code>button</code> zostało przypisane
+        zdarzenie kliknięcia. Taki element musisz wstawić na stronę, podobnie jak i element,
+        którego selektor zostanie przekazany przy tworzeniu nowego obiektu klasy <code>Toggler</code> .
+      </p>
 
-<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+
+    </div>
+  </section>
+
+  <footer id="three">
+    <div class="footer">
+
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+  </html>
