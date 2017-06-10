@@ -9,26 +9,11 @@
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
   <style>
-
-    .box {
-      margin-top: 10px;
-      padding: 20px;
-      border: 2px solid #777;
-      background: #232323;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      background-color: #f7df1e;
+    pre {
+      color: #fff;
       font-weight: bold;
-      border: 2px solid #232323;
-      color: #232323;
     }
-    </style>
+  </style>
 </head>
 <body>
 
@@ -54,14 +39,29 @@
       <div class="console">
         Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:
         <ul>
-        <li>wszystkie elementy <code>div</code>, posiadające zarówno klasę <code>grid</code> oraz klasę <code>grid-</code></li>
-        <li>wszystkie elementy <code>a</code>, których atrybut href zaczyna się na “http”, znajdujące się w
-        elemencie o klasie <code>nav</code></li>
-        <li>wszystkie elementy <code>input</code>, których typ to radio lub checkbox oraz dodatkowo nie są
-        aktualnie zaznaczone (<code>checked</code>)</li>
-        <li>wyłącznie pierwszy element <code>p</code>, który jest pusty (nie zawiera dzieci) oraz znajduje się w
-        elemencie <code>div</code> z identyfikatorem <code>text</code></li>
-        <li>wszystkie elementy z klasą <code>pagination-item</code>, które nie są elementem <code>span</code></li>
+          <li>
+            wszystkie elementy <code>div</code>, posiadające zarówno klasę <code>grid</code> oraz klasę <code>grid-</code><br/>
+            <pre>$("div[class='grid grid-12']")</pre>
+          </li>
+          <li>
+            wszystkie elementy <code>a</code>, których atrybut href zaczyna się na “http”, znajdujące się w
+            elemencie o klasie <code>nav</code><br />
+            <pre>$("nav a[href*='http:']")</pre>
+          </li>
+          <li>
+            wszystkie elementy <code>input</code>, których typ to radio lub checkbox oraz dodatkowo nie są
+            aktualnie zaznaczone (<code>checked</code>)<br />
+            <pre>$("[type='radio']:not(:checked), input[type='checkbox']:not(:checked)")</pre>
+          </li>
+          <li>
+            wyłącznie pierwszy element <code>p</code>, który jest pusty (nie zawiera dzieci) oraz znajduje się w
+            elemencie <code>div</code> z identyfikatorem <code>text</code><br />
+            <pre>$("div#text p:first:empty")</pre>
+          </li>
+          <li>
+            wszystkie elementy z klasą <code>pagination-item</code>, które nie są elementem <code>span</code><br />
+            <pre>$(":not(span).pagination-item")</pre>
+          </li>
         </ul>
         <b>Uwaga:</b> Możesz utworzyć prostą stronę w HTML, gdzie w jakiś sposób podświetlisz
         znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać

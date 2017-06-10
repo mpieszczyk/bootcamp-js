@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootcamp JS week 4 – task 3</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+  <style>
+    form.console,
+    #name-list {
+      padding: 20px;
+      border: 2px solid #777;
+      background: #232323;
+    }
+    input[type="text"]{
+      border: 2px solid #777;
+      padding: 10px 5px;
+      background: #ddd;
+    }
+    input[type="submit"]{
+      border: 2px solid #777;
+      padding: 10px 5px;
+      color: #777;
+      font-weight: bold;
+      background: #F7DF1E;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="menu">
+    <div class="title">
+      <img src="assets/img/img-min.png" />
+      <h1>Week 4 – task 3</h1>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../task1/task1.html">Task1</a></li>
+      <li><a href="../task2/task2.html">Task2</a></li>
+      <li class="active"><a href="#">Task3</a></li>
+      <li><a href="../task4/task4.html">Task4</a></li>
+      <li><a href="../task5/task5.html">Task5</a></li>
+    </ul>
+  </nav>
+
+  <section id="site">
+    <div class="container">
+      <p class="title-console">
+        3. Dynamiczne tworzenie elementów
+      </p>
+      <p class="console">
+        Stwórz aplikację, która zawierać będzie prosty formularz z wyłącznie jednym polem
+        <code>input</code>, a także przyciskiem <code>button</code>. Napisz kod tak, aby po wpisaniu informacji do
+        pola i po wciśnięciu przycisku, wstawić wpisane informacje do nowego elementu <code>li</code>, a
+        ten element do wcześniej wstawionego elementu <code>ul</code>. W ten sposób za każdym razem,
+        gdy zostanie wpisane np. jakieś imię, pojawi się ono na stronie. Dodatkowo zadbaj o to, by
+        jeśli nic nie zostało wpisane do pola, nie wstawiać na stronę pustego elementu <code>li</code>.
+      </p>
+        <form class="console" id="get-name">
+          <input type="text" id="name" placeholder="Podaj jakiś tekst"/>
+          <input type="submit" id="add" value="DODAJ"/>
+        </form>
+    </div>
+  </section>
+
+  <footer id="three">
+    <div class="footer">
+
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootcamp JS week 4 – task 4</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+  <style>
+    div.console {
+      padding: 20px;
+      border: 2px solid #777;
+      background: #232323;
+    }
+    input[type="button"]{
+      border: 2px solid #777;
+      padding: 10px 5px;
+      color: #777;
+      font-weight: bold;
+      background: #F7DF1E;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="menu">
+  <div class="title">
+    <img src="assets/img/img-min.png" />
+    <h1>Week 4 – task 4</h1>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="../task1/task1.html">Task1</a></li>
+    <li><a href="../task2/task2.html">Task2</a></li>
+    <li><a href="../task3/task3.html">Task3</a></li>
+    <li class="active"><a href="#">Task4</a></li>
+    <li><a href="../task5/task5.html">Task5</a></li>
+  </ul>
+</nav>
+
+<section id="site">
+  <div class="container">
+    <p class="title-console">
+      4. Praca z Ajax i JSON
+    </p>
+    <p class="console">
+      Stwórz aplikację, która pozwoli po kliknięciu wybranego przycisku, np. “Załaduj”, pobrać
+      Ajaxem dane typu JSON i wyświetlić je na stronie. Adres, pod który wyślesz zapytanie z
+      użyciem jQuery to http://code.eduweb.pl/bootcamp/users/<br /><br />
+      Otrzymane dane wyświetl na stronie w formie nieuporządkowanej listy ul, a każdego
+      użytkownika w tagu li. Z podanych danych wyłuskaj name, username, email oraz
+      phone. Sformatuj je według własnego uznania.<br /><br />
+      <b>Podpowiedź:</b> Dane możesz umieścić w elemencie li jak tylko chcesz. Jeśli jednak
+      chciałbyś poznać tzw. systemy templatingu, to polecam dodatkowo zapoznać się np. z
+      Handlebars.js. Biblioteka ta pozwoli Ci utworzyć szablon HTML, do którego następnie
+      przekażesz dane JSON, a w odpowiedzi otrzymasz gotowy kod HTML z wstawionymi w
+      odpowiednie miejsca danymi. Taki kod pozostanie wstawić na stronę. Jak korzystać z
+      Handlebars.js od A do Z dowiesz się z naszego wpisu na blogu pt. <a href="http://blog.eduweb.pl/handlebars-kompendium-wiedzy/">Kompendium wiedzy o
+      Handlebars.js.</a>
+    </p>
+
+
+    <script id="tpl" type="text/x-handlebars-template">
+      <ul>
+  		  {{#each person}}
+            <li>
+              <p>
+                Name: <b>{{name}} {{username}}</b><br />
+                Email: <b>{{email}}</b><br />
+               Phone: <b>{{phone}}</b></p>
+            </li>
+        {{/each}}
+      </ul>
+	  </script>
+
+    <div class="console">
+      <input type="button" id="get-data" value="Pobierz dane" />
+    	<div id="output">
+
+    	</div>
+    </div>
+
+  </div>
+</section>
+
+<footer id="three">
+  <div class="footer">
+
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
