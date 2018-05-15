@@ -14,7 +14,29 @@ h1, h2, h3, h4 {
   font-family: 'Oswald', sans-serif;
 }
 
+.expanded {
+  display:block !important;
+}
+
+input[type='button'] {
+  color: #222;
+  padding: 13px 20px;
+  font-size: -webkit-xxx-large;
+  border: none;
+}
+
 /*NAV*/
+
+nav {
+  width: 100%;
+  margin: auto;
+  text-align:center;
+}
+
+nav#toggle {
+  display: flow-root;
+  background: #ddd;
+}
 
 .title {
   background: #F7DF1E;
@@ -24,6 +46,7 @@ h1, h2, h3, h4 {
 }
 
 .title img {
+  max-width: 100%;
   max-height: 156px;
   float: left;
 }
@@ -34,15 +57,14 @@ h1, h2, h3, h4 {
   font-size: 36px;
 }
 
-#menu {
-  width: 100%;
-  margin: auto;
-  text-align:center;
+.btn {
+  display: none;
 }
 
 .nav-menu {
   max-width: 100%;
   margin: auto;
+  margin-left: -40px;
   background: #ddd;
 }
 
@@ -63,6 +85,31 @@ h1, h2, h3, h4 {
    font-weight: bold;
 }
 
+@media screen and (max-width: 554px) {
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu li {
+    padding: 10px;
+    display: block;
+  }
+
+  .btn {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    background: #ddd;
+    text-align: left;
+  }
+
+  nav#toggle {
+    display:none;
+  }
+
+}
+
 /*NAV*/
 /*----------------------------------------------------------------------------*/
 
@@ -72,7 +119,7 @@ h1, h2, h3, h4 {
   margin: 40px;
 }
 
-p.title-console::before {
+.title-console::before {
   content: "X";
   position: absolute;
   right: 12px;
@@ -84,7 +131,7 @@ p.title-console::before {
   color: #fff;
 }
 
-p.title-console {
+.title-console {
   background: #333;
   padding: 10px;
   margin-bottom: 0px;
@@ -98,7 +145,7 @@ p.title-console {
   font-family: 'Oswald', sans-serif;
 }
 
-p.title-console::after {
+.title-console::after {
   content: "–";
   position: absolute;
   right: 50px;
@@ -110,7 +157,7 @@ p.title-console::after {
   color: #fff;
 }
 
-div.console {
+.console {
   margin-top: 0px;
   padding: 20px;
   border-left: 2px solid #777;

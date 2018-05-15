@@ -1,7 +1,7 @@
 (function() {
 
 var dspl = document.querySelector("#dspl");
-var btn = document.querySelector("#button");
+var btns = document.querySelector("#button");
 var time = 10;
 
     function clock(success) {
@@ -15,7 +15,7 @@ var time = 10;
       }
     }
 
-  btn.addEventListener("click", function() {
+  btns.addEventListener("click", function() {
 
     this.classList.add("hidden");
     dspl.classList.remove("hidden");

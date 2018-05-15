@@ -1,7 +1,7 @@
 (function($) {
   $("#open").click(function(e) {
       e.preventDefault();
-      $(".nav-menu").toggle("slide");
+      $("#toggle .nav-menu").toggle("slide");
       $(this).toggleClass("rotate");
   });
 })(jQuery);

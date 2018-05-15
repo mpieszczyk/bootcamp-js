@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootcamp JS week 4 – task 2</title>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
 
   <style>
     .ham {
@@ -29,16 +29,33 @@
       transform: rotate(90deg);
       background: none;
     }
+    .nav-menu {
+      display:none;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="title">
-    <img src="assets/img/img-min.png" />
-    <h1>Week 4 – task 2</h1>
-  </div>
   <nav id="menu">
+    <div class="title">
+      <img src="../../assets/img/img-min.png" />
+      <h1>Week 4 – task 2</h1>
+    </div>
+    <div class="btn">
+        <input type="button" class="expand" id="menu-btn" value="☰" />
+    </div>
+
+      <ul class="nav-menu">
+        <li><a href="../task1/task1.html">Task1</a></li>
+        <li class="active"><a href="#">Task2</a></li>
+        <li><a href="../task3/task3.html">Task3</a></li>
+        <li><a href="../task4/task4.html">Task4</a></li>
+        <li><a href="../task5/task5.html">Task5</a></li>
+      </ul>
+    </nav>
+
+  <nav id="toggle">
     <div class="ham">
       <input type="button" class="burger" id="open" value="☰" />
     </div>
@@ -78,5 +95,16 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
   <script type="text/javascript" src="assets/js/script.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var btn = document.querySelector('.btn'),
+          menu = document.querySelector('.nav-menu');
+
+      btn.addEventListener('click', function(e) {
+        menu.classList.toggle('expanded');
+      });
+
+    }());
+  </script>
   </body>
   </html>

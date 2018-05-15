@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootcamp JS week 4 – task 4</title>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
 
   <style>
     div.console {
@@ -14,7 +14,7 @@
       border: 2px solid #777;
       background: #232323;
     }
-    input[type="button"]{
+    #get-data{
       border: 2px solid #777;
       padding: 10px 5px;
       color: #777;
@@ -27,8 +27,11 @@
 
 <nav id="menu">
   <div class="title">
-    <img src="assets/img/img-min.png" />
+    <img src="../../assets/img/img-min.png" />
     <h1>Week 4 – task 4</h1>
+  </div>
+  <div class="btn">
+      <input type="button" class="expand" id="menu-btn" value="☰" />
   </div>
   <ul class="nav-menu">
     <li><a href="../task1/task1.html">Task1</a></li>
@@ -93,5 +96,16 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript">
+  (function() {
+    var btn = document.querySelector('.btn'),
+        menu = document.querySelector('.nav-menu');
+
+    btn.addEventListener('click', function(e) {
+      menu.classList.toggle('expanded');
+    });
+
+  }());
+</script>
 </body>
 </html>

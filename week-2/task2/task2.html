@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootcamp JS week 2 – task 2</title>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
 
   <style>
   form input,
@@ -38,7 +38,7 @@
     border: 2px solid #0f0;
   }
 
-  .btn {
+  .btns {
     padding: 10px 20px;
     background-color: #f7df1e;
     font-weight: bold;
@@ -51,8 +51,11 @@
 
   <nav id="menu">
     <div class="title">
-      <img src="assets/img/img-min.png" />
+      <img src="../../assets/img/img-min.png" />
       <h1>Week 2 – task 2</h1>
+    </div>
+    <div class="btn">
+        <input type="button" class="expand" id="menu-btn" value="☰" />
     </div>
     <ul class="nav-menu">
       <li><a href="../task1/task1.html">Task1</a></li>
@@ -90,7 +93,7 @@
           <input type="number" name="your-number" placeholder="Numer telefonu" data-error="Podaj poprawny numer">
           <textarea name="your-message" placeholder="Treść wiadomości" data-error="Wpisz treść wiadomości"></textarea>
 
-          <button class="btn" type="submit">Wyślij</button>
+          <button class="btns" type="submit">Wyślij</button>
       </form>
 
     </div>
@@ -103,5 +106,16 @@
   </footer>
 
   <script type="text/javascript" src="assets/js/script.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var btn = document.querySelector('.btn'),
+          menu = document.querySelector('.nav-menu');
+
+      btn.addEventListener('click', function(e) {
+        menu.classList.toggle('expanded');
+      });
+
+    }());
+  </script>
   </body>
   </html>

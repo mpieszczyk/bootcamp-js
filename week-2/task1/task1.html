@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootcamp JS week 2 – task 1</title>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
 
   <style>
 
@@ -21,7 +21,7 @@
       display: none;
     }
 
-    .btn {
+    .btns {
       padding: 10px 20px;
       background-color: #f7df1e;
       font-weight: bold;
@@ -34,8 +34,11 @@
 
   <nav id="menu">
     <div class="title">
-      <img src="assets/img/img-min.png" />
+      <img src="../../assets/img/img-min.png" />
       <h1>Week 2 – task 1</h1>
+    </div>
+    <div class="btn">
+        <input type="button" class="expand" id="menu-btn" value="☰" />
     </div>
     <ul class="nav-menu">
       <li class="active"><a href="#">Task1</a></li>
@@ -58,7 +61,7 @@
         widoczności tego elementu, zmień również tekst przycisku np. z “Pokaż treść” na “Ukryj
         treść” i na odwrót.
       </p>
-      <input type="button" class="btn" value="SHOW BOX">
+      <input type="button" class="btns" value="SHOW BOX">
       <div class="box hidden">
         <p>
           Great! Box is vissible.
@@ -74,5 +77,16 @@
   </footer>
 
   <script type="text/javascript" src="assets/js/script.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var btn = document.querySelector('.btn'),
+          menu = document.querySelector('.nav-menu');
+
+      btn.addEventListener('click', function(e) {
+        menu.classList.toggle('expanded');
+      });
+
+    }());
+  </script>
   </body>
   </html>

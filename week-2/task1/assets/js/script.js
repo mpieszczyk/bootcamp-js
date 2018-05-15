@@ -1,6 +1,6 @@
 (function () {
 
-  var btn = document.querySelector(".btn");
+  var btn = document.querySelector(".btns");
   var box = document.querySelector(".box");
 
       btn.addEventListener("click", function() {
