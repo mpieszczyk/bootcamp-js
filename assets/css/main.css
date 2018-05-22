@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Yantramanav:400,700&subset=latin-ext');
+
+html, body {
+  background-color: #191919;
+  color: #888;
+  font-family: 'Yantramanav', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+}
+
+/*NAV*/
+
+.header {
+  margin: 0;
+  padding: 0;
+  width:100%;
+}
+
+.menu {
+  margin: auto;
+  max-width: 100%;
+}
+
+.menu__content {
+  background-color: #F7DF1E;
+  color: #000;
+  overflow: auto;
+  width: 100%;
+}
+
+.content__left {
+  float: left;
+  width: 50%;
+}
+
+.content__left--img {
+  margin: 20px;
+  max-height: 96px;
+}
+
+.content__right {
+  float: left;
+  line-height: 102px;
+  width: 50%;
+}
+
+.content__right--top {
+  font-size: 36px;
+  margin: 20px;
+  text-align: right;
+}
+
+/*SECTION*/
+
+.section {
+  background-image: url('../img/javascript-code.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 15%;
+}
+
+.row {
+  width: 100%;
+}
+
+.row:first-of-type {
+  padding-top: 10%;
+}
+
+.row__cell {
+  background-color: #F7DF1E;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  float: left;
+  height: 100%;
+  opacity: .25;
+  padding: 25% 5% 0;
+  position: relative;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  width: 25%;
+}
+
+.row__cell:hover {
+  opacity: 1;
+}
+
+.cell__desc {
+  font-weight: bold;
+  position: absolute;
+}
+
+.cell__desc--top {
+  font-size: 28px;
+  left: 10%;
+  top: 15%;
+}
+
+.cell__desc--bottom {
+  bottom: 0;
+  font-size: 72px;
+  right: 10%;
+}

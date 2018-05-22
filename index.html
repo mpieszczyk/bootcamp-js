@@ -6,46 +6,86 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS Bootcamp</title>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
 </head>
 <body>
 
   <header class="header">
-    <nav id="menu" class="menu">
-      <div class="title">
-        <img src="assets/img/img-min.png" />
-        <h1>JS Bootcamp</h1>
+    <nav class="menu">
+      <div class="menu__content">
+        <div class="content__left">
+          <img class="content__left--img" src="assets/img/img-min.png" />
+      </div>
+      <div class="content__right">
+        <h1 class="content__right--top">JS Bootcamp</h1>
+      </div>
       </div>
     </nav>
   </header>
 
   <section class="section">
     <div class="row">
-      <div class="row__cell">
-        <a class="cell__href" href="week-1/task1/task1.html">
-          WEEK ONE
-        </a>
-      </div>
-      <div class="row__cell">
-        <a class="cell__href" href="week-2/task1/task1.html">
-          WEEK TWO
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="row__cell">
-        <a class="cell__href" href="week-3/task1/task1.html">
-          WEEK THREE
-        </a>
-      </div>
-      <div class="row__cell">
-        <a class="cell__href" href="week-4/task1/task1.html">
-          WEEK FOUR
-        </a>
-      </div>
+      <a class="row__href" href="week-1/task1/task1.html">
+        <div class="row__cell" href="">
+          <span class="cell__desc cell__desc--top">
+            WEEK ONE
+          </span>
+          <span class="cell__desc cell__desc--bottom">
+            JS
+          </span>
+        </div>
+      </a>
+      <a class="row__href" href="week-2/task2/task1.html">
+        <div class="row__cell" href="">
+          <span class="cell__desc cell__desc--top">
+            WEEK TWO
+          </span>
+          <span class="cell__desc cell__desc--bottom">
+            JS
+          </span>
+        </div>
+      </a>
+      <a class="row__href" href="week-3/task3/task1.html">
+        <div class="row__cell" href="">
+          <span class="cell__desc cell__desc--top">
+            WEEK THREE
+          </span>
+          <span class="cell__desc cell__desc--bottom">
+            JS
+          </span>
+        </div>
+      </a>
+      <a class="row__href" href="week-4/task4/task1.html">
+        <div class="row__cell" href="">
+          <span class="cell__desc cell__desc--top">
+            WEEK FOUR
+          </span>
+          <span class="cell__desc cell__desc--bottom">
+            JS
+          </span>
+        </div>
+      </a>
     </div>
   </section>
+
+<script>
+
+var changeHeight = function() {
+
+  var head_height = document.querySelector('.header').offsetHeight,
+      win_height = window.innerHeight,
+      section = document.querySelector('.section'),
+      sec_height = win_height - head_height;
+
+      section.style.height = sec_height+"px";
+
+  window.addEventListener('resize', function(){
+        section.style.height = sec_height+"px";
+  }, true);
+}
+changeHeight();
+</script>
 
 </body>
 </html>
