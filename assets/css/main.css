@@ -58,11 +58,7 @@ h1, h2, h3, h4 {
 /*SECTION*/
 
 .section {
-  background-image: url('../img/javascript-code.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0 15%;
+  padding: 0 5%;
 }
 
 .row {
@@ -107,4 +103,35 @@ h1, h2, h3, h4 {
   bottom: 0;
   font-size: 72px;
   right: 10%;
+}
+
+@media screen and (max-width: 456px) {
+
+  .content__left {
+    text-align: center;
+    width: 100%;
+  }
+
+  .content__right {
+    display:none;
+  }
+
+  .row__cell {
+    padding: 99% 5% 0;
+    width: 100%;
+  }
+
+  .cell__desc--top {
+    font-size: 24px;
+}
+
+}
+
+@media screen and (max-width: 980px) {
+
+  .row__cell {
+    padding: 49% 5% 0;
+    width: 50%;
+  }
+
 }
